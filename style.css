@@ -1,10 +1,18 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 #content {
     text-align: center;
     margin-top: 50px;
+    flex: 1;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
 }
 
 #actionButton {
@@ -12,4 +20,58 @@ body {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    background-color: rebeccapurple;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#actionButton:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+nav, footer {
+    background-color: rebeccapurple;
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+ul {
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+li a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
