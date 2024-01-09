@@ -31,6 +31,7 @@ body {
 }
 
 nav, footer {
+    text-align: center;
     background-color: rebeccapurple;
     color: #fff;
     padding: 10px;
